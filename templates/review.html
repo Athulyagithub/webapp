@@ -1,0 +1,97 @@
+{% extends 'movie.html'%}
+{% block base %}
+
+<style>
+    .rating {
+        unicode-bidi: bidi-override;
+        direction: rtl;
+        text-align: left;
+    }
+    .rating > input {
+        display: none;
+    }
+    .rating > label {
+        display: inline-block;
+        margin-right: 5px;
+        font-size: 30px;
+        color: #aaa;
+        cursor: pointer;
+    }
+    .rating > input:checked ~ label,
+    .rating > input:checked ~ label:hover,
+    .rating > input:checked ~ label:hover ~ label {
+        color: #ffcc00;
+    }
+</style>
+<div style=" background-image: url('/static/images/bg1.jpg'); width:1400px;height:550px;">
+
+   <div class="col-md-5 mx-auto">
+          <div class="form_container">
+            <div class="heading_container heading_center"><br>
+
+              <h2 style="color: black;">Review and Rating</h2><br>
+            </div><br><br>
+            <form action="" method="post">
+                {% csrf_token %}
+                <div>
+                       <div class="form-row">
+                <div class="form-group col">
+                    <select id="movie" class="message-box form-control"  name="film" >
+
+
+                        <option >select movie</option>
+                        {% for i in ratings %}
+
+                        <option value="{{ i.id }}">{{ i.title }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                    </div>
+
+
+              <div class="form-row">
+                <div class="form-group col"><br>
+                     <div class="rating">
+                            <input type="radio" id="star5" name="rating" value="5"><label for="star5">&#9733;</label>
+                            <input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
+                            <input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
+                            <input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
+                            <input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
+                        </div>
+                </div>
+              </div>
+
+
+
+
+                     <div class="form-row">
+                         <div class="form-group col">
+                            <div>
+                                <input type="text" class="message-box form-control" name="review" placeholder="Write your reviews here" />
+
+                            </div>
+                         </div>
+                     </div>
+
+
+
+
+              <div class="btn_box">
+                <span class="spacer" style=" margin-left: 10px;">
+                    <button class="btn btn-outline-secondary">
+                  submit
+                </button>
+                </span>
+
+              </div><br>
+                                        </div>
+
+            </form>
+          </div>
+   </div>
+</div>
+
+
+
+
+{% endblock %}

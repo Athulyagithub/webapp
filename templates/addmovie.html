@@ -1,0 +1,103 @@
+{% extends 'movie.html'%}
+{% block base %}
+<div style=" background-image: url('/static/images/bg1.jpg'); width:1400px;height:580px;">
+
+   <div class="col-md-5 mx-auto">
+          <div class="form_container">
+            <div class="heading_container heading_center"><br>
+
+              <h2 style="color: black;">Add Movie</h2><br>
+            </div>
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div>
+              <div class="form-row">
+                <div class="form-group col"><br>
+                  <input type="text" class="form-control" name="title" placeholder="Title" required />
+                </div>
+              </div>
+                     <div class="form-row">
+                <div class="form-group col">
+                  <input type="file" class="message-box form-control" name="poster"  required />
+                </div>
+              </div>
+                     <div class="form-row">
+                <div class="form-group col">
+                  <input type="date" class="message-box form-control" name="release_date" placeholder="Release date " required />
+                </div>
+              </div>
+                     <div class="form-row">
+                <div class="form-group col">
+                  <input type="text" class="message-box form-control" name="description" placeholder="Description" required/>
+                </div>
+              </div>
+
+
+
+              <div class="form-row">
+                <div class="form-group col">
+                  <input type="text" class="message-box form-control"  name="actors" placeholder="Actors" required/>
+                </div>
+              </div>
+                     <div class="form-row">
+                <div class="form-group col">
+                  <input type="text" class="message-box form-control"  name="trailer_link" placeholder="Trailer link" required />
+                </div>
+              </div>
+
+                    <div class="form-row">
+                <div class="form-group col">
+                    <select id="category" class="message-box form-control" placeholder="Category" name="category" >
+
+
+                        <option>Category</option>
+                        {% for i in categories %}
+
+                        <option value="{{ i.id }}">{{ i.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                    </div>
+
+
+
+              <div class="btn_box">
+                <span class="spacer" style=" margin-left: 10px;">
+                    <center> <button class="btn btn-outline-secondary">
+
+                          Add movie
+
+
+                </button>
+                        </center>
+                </span>
+<!--                        <span class="spacer" style="margin-left: 10px;"></span>-->
+<!--                  <span>If you  already have an account , click here  -&ndash;&gt;</span><button style="background-color:black; color: white;">-->
+<!--                 <a href="/login/#ss"> Login</a>-->
+<!--              </button>-->
+
+              </div><br>
+
+
+<span class="spacer" style=" margin-left: 200px;">{% for msg in messages %}
+<b>
+{{msg}}
+    {% endfor %}</b></span>
+                </div>
+            </form>
+
+          </div>
+        </div>
+</div>
+
+<body>
+
+</body>
+
+
+
+
+
+
+
+{% endblock %}

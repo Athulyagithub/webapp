@@ -1,0 +1,14 @@
+{% extends 'movie.html'%}
+{% block base %}
+<div style=" background-image: url('/static/images/bg1.jpg'); width:1400px;height:700px;"><br><br>
+<br><br><br><br><br><br><center>
+<h2>Update Profile</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"  class="btn btn-warning">Update</button>
+    </form>
+
+        </center>
+</div>
+    {% endblock %}

@@ -1,0 +1,751 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="{% static 'images/fevicon.png'%}" type="image/x-icon">
+  <title>FilmFinder</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css'%}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'%}" />
+  <!-- nice select -->
+  <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css'%}" integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4=" crossorigin="anonymous" />
+  <!-- font awesome style -->
+  <link href="{% static 'css/font-awesome.min.css'%}" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css'%}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css'%}" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <div class="hero_bg_box" style="height:700px;">
+      <img src="{% static 'images/bg7.jpg'%}" alt=""  >
+    </div>
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="header_top">
+        <div class="container-fluid header_top_container">
+
+          <div class="contact_nav">
+            <a href="">
+<!--              <i class="fa fa-map-marker" aria-hidden="true"></i>-->
+              <span>
+
+              </span>
+            </a>
+<!--            <a href="">-->
+
+
+<!--             <i class="fa fa-phone" aria-hidden="true"></i>&ndash;&gt;-->
+<!--              <span>-->
+<!--               </span>-->
+<!--            </a>-->
+            <a href="">
+              <i class="fa fa-envelope" aria-hidden="true" style="background-color:#460E02"></i>
+              <span>
+                FilmFinder@gmail.com
+              </span>
+            </a>
+
+          </div>
+          <div class="social_box">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true" style="background-color:#460E02"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true" style="background-color:#460E02"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true" style="background-color:#460E02"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true" style="background-color:#460E02"></i>
+            </a>
+          </div>
+
+<!--<div class="search-container">-->
+<!--    <a href="/search_by_category">-->
+<!-- <button class="btn btn-outline-light" type="submit"><i class="fa fa-search" aria-hidden="true"></i>-->
+<!--</button>        </a>-->
+<!--</div>-->
+
+        </div>
+      </div>
+
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand " href=""> welcome to FilmFinder </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav  ">
+
+                <li class="nav-item active">
+                  <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+<!--             <ul>-->
+<!--                    {% if user.is_authenticated %}-->
+<!--                 <li class="nav-item" style="color:white">{<li>-->
+<!--                 <li class="nav-item">-->
+<!--                  <a class="nav-link" href="/add/#ss">Add Movies</a>-->
+<!--                </li>-->
+<!--                  <li class="nav-item">-->
+<!--                  <a class="nav-link" href="/update_profile/#ss">Edit profile</a>-->
+<!--                </li>-->
+<!---->
+<!--                 <li class="nav-item">-->
+<!--                  <a class="nav-link" href="/review/#ss">Add Reviews</a>-->
+<!--                </li>-->
+
+
+<!--                    {% else %}-->
+
+
+
+<!--                 <li class="nav-item">-->
+<!--                  <a class="nav-link" href="/register/#ss"></a>-->
+<!--                </li>-->
+<!--                 <li class="nav-item">-->
+<!--                  <a class="nav-link" href="/login/#ss"></a>-->
+<!--                </li>-->
+<!--                    <li><a href="registration">Register</a></li>-->
+<!--                    <li><a href="login">Login</a></li>-->
+<!--                    {% endif %}-->
+
+<!--                </ul>-->
+
+<!--                <li class="nav-item active">-->
+<!--                  <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>-->
+<!--                </li>-->
+
+
+
+<!--                    {% if user.is_authenticated %}-->
+<!--                      <li class="nav-item">-->
+<!--                        <a class="nav-link" href="/logout/">Logout</a>-->
+<!--                      </li>-->
+
+<!--                    {% else %}-->
+
+
+
+<!--                 <li class="nav-item">-->
+<!--                  <a class="nav-link" href="/index/">Home</a>-->
+<!--                </li>-->
+<!--                 <li class="nav-item">-->
+<!--                  <a class="nav-link" href="/login/#ss">Logout</a>-->
+<!--                </li>-->
+<!--                    <li><a href="registration">Register</a></li>-->
+<!--                    <li><a href="login">Login</a></li>-->
+<!--                    {% endif %}-->
+
+
+
+
+
+
+<!--                <li class="nav-item">-->
+<!--                  <a class="nav-link" href="registration">REGISTER</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                  <a class="nav-link" href="login">-->
+<!--                    <i class="fa fa-user" aria-hidden="true"></i>-->
+<!--                    <span>-->
+
+<!--                    </span>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                  <a class="nav-link" href=""> Team </a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                  <a class="nav-link" href="registration">REGISTER</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                  <a class="nav-link" href="login">-->
+<!--                    <i class="fa fa-user" aria-hidden="true"></i>-->
+<!--                    <span>-->
+<!--                      Login-->
+<!--                    </span>-->
+<!--                  </a>-->
+<!--                </li>-->
+
+<!--                <form class="d-flex" action="" method="get">-->
+<!--          {% csrf_token %}-->
+<!--          <input class="form-control me-2" type="search" placeholder="Search by film categoyry"  name='q' aria-label="Search">-->
+<!--        <button class="btn btn-outline-light" type="submit"><i class="fa fa-search" aria-hidden="true"></i>-->
+<!--</button>-->
+<!--      </form>-->
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-lg-10 col-md-11 mx-auto">
+                  <div class="detail-box">
+                    <h1>
+                       <br>
+                      FilmFinder
+                    </h1>
+                    <p>
+Get personalized movie picks in seconds
+                    </p>
+<!--original search-->
+
+<!--                     <form class="d-flex" action="/SearchResult" method="get">-->
+<!--                      {% csrf_token %}-->
+<!--                      <span class="spacer" style="margin-left: 330px;">-->
+
+<!--                        <input class="form-control me-2" type="search" placeholder="Search by movie category"  name='q' aria-label="Search" style="width:250px">-->
+<!--                              </span>-->
+
+<!--                        <button class="btn btn-outline-light" type="submit"><i class="fa fa-search" aria-hidden="true"></i>-->
+<!--                       </button>-->
+<!--                     </form>-->
+<!--    {% csrf_token %}-->
+<!--    <span class="spacer" style="margin-left: 330px;">-->
+<!--        <input class="form-control me-2" type="search" placeholder="Search by movie category"  name='q' aria-label="Search" style="width:250px">-->
+<!--    </span>-->
+<!--    <button class="btn btn-outline-light" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>-->
+<!--</form>-->
+
+
+<!--original search-->
+
+
+
+
+
+
+<!--                    dummy-->
+<!--<form method="post">-->
+<!--    {% csrf_token %}-->
+<!--    <select name="category">-->
+<!--        <option value="" selected disabled>Select Category</option>-->
+<!--        {% for category in categories %}-->
+<!--            <option value="{{ category.id }}">{{ category.name }}</option>-->
+<!--        {% endfor %}-->
+<!--    </select>-->
+<!--  <button class="btn btn-outline-light" type="submit"><i class="fa fa-search" aria-hidden="true"></i>-->
+<!--</form>-->
+
+<!-- Display search results -->
+<!--{% if movies %}-->
+<!--    <h2>Search Results:</h2>-->
+<!--    <ul>-->
+<!--        {% for movie in movies %}-->
+<!--            <li>{{ movie.title }}</li>-->
+<!--            &lt;!&ndash; Display other movie details as needed &ndash;&gt;-->
+<!--        {% endfor %}-->
+<!--    </ul>-->
+<!--{% endif %}-->
+<!--dummy-->
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+<!--        <div class="carousel_btn-box">-->
+<!--          <a class="carousel-control-prev" href="#customCarousel1" role="button" data-slide="prev">-->
+<!--            <i class="fa fa-arrow-left" aria-hidden="true"></i>-->
+<!--            <span class="sr-only">Previous</span>-->
+<!--          </a>-->
+<!--          <a class="carousel-control-next" href="#customCarousel1" role="button" data-slide="next">-->
+<!--            <i class="fa fa-arrow-right" aria-hidden="true"></i>-->
+<!--            <span class="sr-only">Next</span>-->
+<!--          </a>-->
+<!--        </div>-->
+<!--      </div>-->
+
+      </div>
+    </section>
+
+  </div>
+    <!-- end slider section -->
+  <br><br>
+ <div id ="ss">
+  {% block base %}
+  {% endblock %}
+  </div>
+
+
+  <!-- service section -->
+
+
+<!--  <section class="service_section layout_padding">-->
+<!--    <div class="container " >-->
+
+<!--      <div class="heading_container heading_center ">-->
+<!--        <h2 class="">-->
+<!--           Recommended Movies        </h2>-->
+<!--      </div>-->
+<!--        <div class="row" style=" filter: drop-shadow(20px 20px 10px black);" >-->
+<!--            {% for i in result %}-->
+<!--          <div class="card " style=" width: 370px;-->
+<!--    height: 290px;-->
+<!--    border: 1px solid #ccc;-->
+<!--    border-radius: 5px;-->
+<!--    overflow: hidden;-->
+<!--    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);-->
+<!--    margin: 10px;-->
+<!--    display: flex;-->
+<!--    flex-direction: column;">-->
+<!--          <a href="view/{{i.id}}/#ss">-->
+<!--  <img src="{{i.poster.url}}"  style="width: 100%;-->
+<!--    height: 200px;object-fit: cover;" >-->
+<!--            </a>-->
+<!--  <div class="card-content " style=" padding:-7x;-->
+<!--    flex-grow: 1;-->
+<!--    display: flex;-->
+<!--background-color:#424545;-->
+<!--color:black;-->
+
+
+<!--    flex-direction: column;"><br>-->
+<!--    <h2 style=" font-size: 18px;-->
+<!--    margin: 0 0 10px;"><center><b>{{i.title}}</b></center></h2>-->
+<!--      <h3 style=" font-size: 18px;-->
+<!--    margin: 0 0 10px;"><center>{{i.category}}</center></h3>-->
+
+
+<!--    </div>-->
+<!--  </div>-->
+<!--            {% endfor %}-->
+<!--        </div>-->
+<!--    </div>-->
+<!--  </section>-->
+
+  <!-- service section ends -->
+
+  <!-- about section -->
+
+<!--  <section class="about_section">-->
+<!--    <div class="container-fluid">-->
+<!--      <div class="row">-->
+<!--        <div class="col-md-5 offset-md-1">-->
+<!--          <div class="detail-box pr-md-2">-->
+<!--            <div class="heading_container">-->
+<!--              <h2 class="">-->
+<!--                About Us-->
+<!--              </h2>-->
+<!--            </div>-->
+<!--            <p class="detail_p_mt">-->
+<!--              Discover your next favorite movie with our Film-Finder movie recommendation platform. Whether you're in the mood for a gripping thriller, a heartwarming romance, or a pulse-pounding action flick, we've got you covered.-->
+
+<!--Our platform utilizes state-of-the-art algorithms to analyze your preferences and viewing history, providing you with personalized recommendations tailored just for you. Say goodbye to endless scrolling through mediocre options and hello to a curated selection of films that are sure to captivate and entertain.-->
+
+<!--Explore a diverse range of genres, explore hidden gems, and stay up-to-date with the latest releases. With user reviews, ratings, and trailers at your fingertips, you'll never miss out on the next big hit.-->
+
+<!--Sit back, relax, and let us guide you through the wonderful world of cinema. Start your journey today and experience the magic of movie recommendations like never before!-->
+<!--            </p>-->
+<!--            <a href="" class="">-->
+<!--              Read More-->
+<!--            </a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="col-md-6 px-0">-->
+<!--          <div class="img-box ">-->
+
+<!--            <img src="{% static 'images/mv.jpg'%}" class="box_img" alt="about img">-->
+
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
+
+  <!-- about section ends -->
+
+  <!-- team section -->
+
+<!--  <section class="team_section layout_padding">-->
+<!--    <div class="container">-->
+<!--      <div class="heading_container heading_center">-->
+<!--        <h2>-->
+<!--          Latest Movies-->
+<!--        </h2>-->
+<!--        <p>-->
+<!--          -->
+<!--        </p>-->
+<!--      </div>-->
+<!--      <div class="row">-->
+<!--        <div class="col-md-4 col-sm-6 mx-auto">-->
+<!--          <div class="box">-->
+<!--            <div class="img-box">-->
+<!--              <img src="{% static 'images/t1.jpg'%}" alt="">-->
+<!--            </div>-->
+<!--            <div class="detail-box">-->
+<!--              <h5>-->
+<!--                Martin Anderson-->
+<!--              </h5>-->
+<!--              <h6 class="">-->
+<!--                supervisor-->
+<!--              </h6>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="col-md-4 col-sm-6 mx-auto">-->
+<!--          <div class="box">-->
+<!--            <div class="img-box">-->
+<!--              <img src="{% static 'images/t2.jpg'%}" alt="">-->
+<!--            </div>-->
+<!--            <div class="detail-box">-->
+<!--              <h5>-->
+<!--                Denny Butler-->
+<!--              </h5>-->
+<!--              <h6 class="">-->
+<!--                supervisor-->
+<!--              </h6>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="col-md-4 col-sm-6 mx-auto">-->
+<!--          <div class="box">-->
+<!--            <div class="img-box">-->
+<!--              <img src="{% static 'images/t3.jpg'%}" alt="">-->
+<!--            </div>-->
+<!--            <div class="detail-box">-->
+<!--              <h5>-->
+<!--                Nathan Mcpherson-->
+<!--              </h5>-->
+<!--              <h6 class="">-->
+<!--                supervisor-->
+<!--              </h6>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
+
+  <!-- end team section -->
+
+  <!-- contact section -->
+<!--  <section class="contact_section ">-->
+<!--    <div class="container-fluid">-->
+
+<!--      <div class="row">-->
+<!--        <div class="col-md-6 px-0">-->
+<!--          <div class="img-box ">-->
+<!--            <img src="{% static 'images/contact-img.jpg'%}" class="box_img" alt="about img">-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="col-md-5 mx-auto">-->
+<!--          <div class="form_container">-->
+<!--            <div class="heading_container heading_center">-->
+<!--              <h2>Get In Touch</h2>-->
+<!--            </div>-->
+<!--            <form action="">-->
+<!--              <div class="form-row">-->
+<!--                <div class="form-group col">-->
+<!--                  <input type="text" class="form-control" placeholder="Your Name" />-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="form-row">-->
+<!--                <div class="form-group col-lg-6">-->
+<!--                  <input type="text" class="form-control" placeholder="Phone Number" />-->
+<!--                </div>-->
+<!--                <div class="form-group col-lg-6">-->
+<!--                  <select name="" id="" class="form-control wide">-->
+<!--                    <option value="">Select Service</option>-->
+<!--                    <option value="">Service 1</option>-->
+<!--                    <option value="">Service 2</option>-->
+<!--                    <option value="">Service 3</option>-->
+<!--                  </select>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="form-row">-->
+<!--                <div class="form-group col">-->
+<!--                  <input type="email" class="form-control" placeholder="Email" />-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="form-row">-->
+<!--                <div class="form-group col">-->
+<!--                  <input type="text" class="message-box form-control" placeholder="Message" />-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="btn_box">-->
+<!--                <button>-->
+<!--                  SEND-->
+<!--                </button>-->
+<!--              </div>-->
+<!--            </form>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
+  <!-- end contact section -->
+
+  <!-- client section -->
+  <div style="background-color:#F2AA4CFF; ">
+<br>
+  <section class="client_section layout_padding">
+    <div class="container ">
+      <div class="heading_container heading_center">
+        <h2>
+
+        </h2>
+        <hr>
+      </div>
+      <div >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-lg-7 col-md-9 mx-auto">
+                <div class="client_container ">
+                  <div class="img-box">
+                    <img src="" alt="">
+                  </div>
+                  <div class="detail-box">
+                    <h5>
+                    </h5>
+                    <p>
+                    <span>
+<!--                      <i class="fa fa-quote-left" aria-hidden="true"></i>-->
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-7 col-md-9 mx-auto">
+                <div class="client_container ">
+                  <div class="img-box">
+                    <img src="" alt="">
+                  </div>
+                  <div class="detail-box">
+                    <h5>
+                    </h5>
+                    <p>
+                    <span>
+<!--                      <i class="fa fa-quote-left" aria-hidden="true"></i>-->
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-7 col-md-9 mx-auto">
+                <div class="client_container ">
+                  <div class="img-box">
+                    <img src="" alt="">
+                  </div>
+                  <div class="detail-box">
+                    <h5>
+                    </h5>
+                    <p>
+                    </p>
+                    <span>
+<!--                      <i class="fa fa-quote-left" aria-hidden="true"></i>-->
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel_btn-box">
+          <a class="carousel-control-prev" href="#carouselExample2Controls" role="button" data-slide="prev">
+            <span>
+<!--              <i class="fa fa-arrow-left" aria-hidden="true"></i>-->
+            </span>
+            <span class="sr-only"></span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExample2Controls" role="button" data-slide="next">
+            <span>
+<!--              <i class="fa fa-arrow-right" aria-hidden="true"></i>-->
+            </span>
+            <span class="sr-only"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end client section -->
+
+  <!-- info section -->
+  <section class="info_section " style="background-color:#212121">
+    <div class="container">
+      <div class="info_top">
+        <div class="row">
+          <div class="col-md-3 ">
+            <a class="navbar-brand" href="index.html">
+              FilmFinder
+            </a>
+          </div>
+          <div class="col-md-5 ">
+            <div class="info_contact">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Location
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  +01 1234567890
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="social_box">
+              <a href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info_bottom">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="info_detail">
+              <h5>
+               Head
+              </h5>
+              <p>
+               Every great film should seem new every time you see it. Film as dream, film as music. No art passes our conscience.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="info_form">
+              <h5>
+                DM
+              </h5>
+              <form action="">
+                <input type="text" placeholder="Enter Your Email" />
+                <button type="submit">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="info_detail">
+              <h5>
+                Latest
+              </h5>
+              <p>
+               a must-see/a smash hit a box-office success/failure an audience pleaser to be missed a moving production. recommend this film to everybody …
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <div class="">
+              <h5>
+                Useful links
+              </h5>
+              <ul class="info_menu">
+                <li>
+                  <a href=''>
+                    Home
+                  </a>
+                </li>
+
+                <li>
+                  <a href="">
+                    Recommends
+                  </a>
+                </li>
+                <li class="mb-0">
+                  <a href="">
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://html.design/">FilmFinder</a>
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="{% static 'js/jquery-3.4.1.min.js'%}"></script>
+  <!-- popper js -->
+  <script src="{% static 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'%}" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <!-- bootstrap js -->
+  <script src="{% static 'js/bootstrap.js'%}"></script>
+  <!-- owl slider -->
+  <script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'%}"></script>
+  <!-- nice select -->
+  <script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js'%}" integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
+  <!-- custom js -->
+  <script src="{% static 'js/custom.js'%}"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+  </div>
+</body>
+
+</html>

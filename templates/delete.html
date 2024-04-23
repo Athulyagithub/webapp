@@ -1,0 +1,46 @@
+{% extends 'index.html'%}
+{% block base %}
+<br><br><br><br>
+<div style=" background-image: url('/static/images/bg1.jpg'); width:1400px;height:500px;">
+
+<br><br><br><br><br>
+<br><br><br><br>
+
+<form method="POST">
+    {% csrf_token%}
+    <center>
+    <span class="spacer" style=" margin-left: 25px;">
+    Are u sure to delete this Movie ?
+    </span>
+<input type="submit" class="btn btn-secondary" >
+    </center>
+</form>
+</div>
+
+
+
+
+
+
+
+<!--<div style=" background-image: url('/static/images/bg1.jpg'); width:1400px;height:500px;">-->
+
+<!--   <div class="col-md-5 mx-auto">-->
+<!--          <div class="form_container">-->
+<!--            <br><br><br><br><br><br>-->
+<!--              <br><br><br>-->
+
+<!--            <form  method="POST" >-->
+<!--                {% csrf_token %}-->
+<!--                <span class="spacer" style=" margin-left: 25px;">-->
+<!--                    Are u want to delete this movie ?-->
+<!--                    <button type="button" class="btn btn-danger">-->
+<!--                        Delete-->
+<!--                    </button>-->
+<!--                </span>-->
+<!--            </form>-->
+<!--          </div>-->
+<!--   </div>-->
+
+
+{% endblock %}
